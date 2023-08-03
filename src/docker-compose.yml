@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    container_name: mean-db
+    image: mongo:5.0.16
+    volumnes:
+      - ./mongo:/data/db
+    ports:
+      - 27017:27017
+    restart: always
+
+# COMO NO PUEDO USAR DOCKER POR EL CYBERARK, TENGO QUE LANZAR ESTE COMANDO DESDE CMD UNA VEZ INSTALADO PODMAN
+#podman volume create myvol mongo
+#podman run -dt --name mean-db -p 27017:27017 -v "mongo:/data/db:Z" docker.io/library/mongo:latest
