@@ -17,3 +17,10 @@ Para poder usar este fichero .env hay que instalar un paquete con
 npm i @nestjs/config
 e importar ConfigModule.forRoot() en el app.module.ts
 ```
+
+# para poder usar JWT https://docs.nestjs.com/security/authentication#jwt-token
+
+```
+hay que instalar npm install --save @nestjs/jwt
+
+```

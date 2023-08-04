@@ -17,7 +17,7 @@ import { ConfigModule } from '@nestjs/config';
 export class AppModule {
 
   constructor(){
-    console.log(process.env);
+    console.log(process.env.MONGO_URI);
   }
 
 }
