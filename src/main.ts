@@ -5,6 +5,9 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  //Tenemos que habilitar CORS.. sacado del pdf de nestjs
+  app.enableCors();
+  
   //Hacemos que el backend sea super restringido.. si el body que viene no es igual a nuestra entidad lo bloquea
   app.useGlobalPipes( 
     new ValidationPipe({
@@ -12,6 +15,8 @@ async function bootstrap() {
     forbidNonWhitelisted: true,
     })
    );
+
+   
 
   await app.listen(3000);
 }

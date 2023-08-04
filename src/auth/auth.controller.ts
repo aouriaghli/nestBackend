@@ -8,7 +8,7 @@ import { RegisterUserDto } from './dto/register-user.dto';
 import { AuthGuard } from './guards/auth.guard';
 import { get } from 'http';
 import { User } from './entities/user.entity';
-import { LoginResponse } from '../../dist/auth/interfaces/login-response';
+import { LoginResponse } from './interfaces/login-response';
 
 @Controller('auth')
 export class AuthController {
