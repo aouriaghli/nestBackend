@@ -53,18 +53,12 @@ export class AuthService {
   }
 
   async register(registerUserDto : RegisterUserDto): Promise<LoginResponse>{
-    try {
-
       const user = await this.create(registerUserDto);
 
       return {
         user: user,
         token: this.getJwtToken({id : user._id}),
       }
-      
-    } catch (error) {
-      
-    }
   }
 
 
