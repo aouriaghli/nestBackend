@@ -21,7 +21,12 @@ export class AuthController {
 
   @Post('/login')
   login(@Body() loginDto: LoginDto) {
-    return this.authService.login(loginDto);
+    try {
+      return this.authService.login(loginDto);  
+    } catch (error) {
+      console.log(' Error al hacer login ' + error);
+    }
+    
   }
 
   @Post('/register')
