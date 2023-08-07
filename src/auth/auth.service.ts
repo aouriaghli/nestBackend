@@ -83,7 +83,7 @@ export class AuthService {
           token : this.getJwtToken({ id: user.id}),
       };  
     } catch (error) {
-      console.log(`APP corriendo en puerto: ${ error }`) ;
+      console.log(`APP error en login: ${ error }`) ;
     }
     
 
