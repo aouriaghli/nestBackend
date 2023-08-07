@@ -75,18 +75,12 @@ export class AuthService {
       throw new UnauthorizedException('Not valid credentials - password');
     }
 
-    try {
       const { password:_, ...rest } = user.toJSON();
 
       return {
           user: rest,
           token : this.getJwtToken({ id: user.id}),
       };  
-    } catch (error) {
-      console.log(`APP corriendo en puerto: ${ error }`) ;
-    }
-    
-
 
   }
 
